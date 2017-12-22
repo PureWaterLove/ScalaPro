@@ -1,0 +1,119 @@
+trait Phenomenon{//现象特质
+
+}
+
+trait Party extends Phenomenon{//团体特质 继承自现象
+
+}
+trait Person extends Party{//人的特质  继承自团体
+
+}
+trait Organization extends Party{//组织特质  继承自团体
+
+}
+trait PartyRelationship extends Phenomenon{//团体关系特质 继承自现象
+
+}
+trait Employment extends PartyRelationship{//雇佣关系  继承自团体关系特质
+
+}
+trait CustomerRelationship extends PartyRelationship{//客户特质  继承自团体关系特质
+
+}
+trait OrganizationPollup extends PartyRelationship{//组织隶属关系特质  继承自团体关系特质
+
+}
+trait OrganizationContact extends PartyRelationship{//组织联络人关系特质  继承自团体关系特质
+
+}
+trait DistributionChannelRelationship extends PartyRelationship{//分销渠道关系  继承自团体关系特质
+
+}
+trait PartyRole extends Phenomenon{//团体角色特质 继承自现象
+
+}
+trait PersonRole extends PartyRole{//个人角色特质 继承自团体角色
+
+}
+trait OrganizationRole extends PartyRole{//组织角色特质 继承自团体角色
+
+}
+trait CustomRole extends PartyRole{//客户角色特质 继承自团体角色
+
+}
+trait BillToCustomer extends CustomRole{//付款客户特质 继承自客户角色
+
+}
+trait ShipToCustomer extends CustomRole{//装运目标客户特质 继承自客户角色
+
+}
+trait EndUserCustomer extends CustomRole{//最终用户客户特质 继承自客户角色
+
+}
+trait Prospect extends PartyRole{//潜在客户角色特质  继承自团体角色
+
+}
+trait ShareHolder extends PartyRole{//股东特质  继承自团体角色
+
+}
+trait Employee extends PersonRole{//雇员特质  继承自个人角色
+
+}
+trait Contractor extends PersonRole{//签约人特质  继承个人角色
+
+}
+trait FamilyMember extends PersonRole{//家庭成员特质  继承自个人角色
+
+}
+trait Contact extends PersonRole{//联系人特质  继承个人角色
+
+}
+trait DistributionChannel extends OrganizationRole{//分销渠道特质  继承自组织角色
+
+}
+trait Agent extends DistributionChannel{//代理商特质  继承自分销渠道
+
+}
+trait Distributor extends DistributionChannel{//分销商特质  继承自分销渠道
+
+}
+trait Partner extends OrganizationRole{//合作伙伴特质  继承自组织角色
+
+}
+trait Competitor extends OrganizationRole{//竞争对手特质 继承自组织角色
+
+}
+trait HouseHold extends PersonRole{//住户特质  继承个人角色
+
+}
+trait Regulatory extends OrganizationRole{//管理机构特质  继承自组织角色
+
+}
+trait Supplier extends OrganizationRole{//供应商特质  继承自组织角色
+
+}
+trait Association extends OrganizationRole{//协会特质 继承自组织角色
+
+}
+trait OrganizationUnit extends OrganizationRole{//组织单位特质  继承自组织角色
+
+}
+trait ParentOrganization extends OrganizationUnit{//上级组织特质  继承自组织单位
+
+}
+trait Department extends OrganizationUnit{//部门特质  继承自组织单位
+
+}
+trait Division extends OrganizationUnit{//分支机构特质  继承自组织单位
+
+}
+trait Subsidiary extends OrganizationUnit{//分公司特质  继承自组织单位
+
+}
+trait InternalOrganization extends OrganizationRole{//内部组织特质 继承自组织角色
+
+}
+
+object TraitFrame extends App {
+  println("hello trait !!!")
+}
